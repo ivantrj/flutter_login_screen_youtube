@@ -8,38 +8,30 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Login UI"),
-        centerTitle: true,
-        backgroundColor: Colors.purple,
-      ),
-      body: Column(
+    return CupertinoPageScaffold(
+      navigationBar:
+          const CupertinoNavigationBar(middle: Text('KindaCode.com')),
+      child: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 100),
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 150),
             child: Image.asset(
               "images/login_logo.png",
               height: 150,
             ),
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-            child: TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Username',
-              ),
+            child: CupertinoTextField(
+              placeholder: "Username",
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-            child: TextFormField(
+            child: CupertinoTextField(
               obscureText: true,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Password',
-              ),
+              placeholder: "Password",
+              clearButtonMode: OverlayVisibilityMode.editing,
             ),
           ),
           Padding(
@@ -47,7 +39,7 @@ class LoginScreen extends StatelessWidget {
             child: CupertinoButton(
               onPressed: () {},
               child: Text("Login"),
-              color: CupertinoColors.activeGreen,
+              // color: CupertinoColors.activeGreen,
             ),
           ),
         ],
