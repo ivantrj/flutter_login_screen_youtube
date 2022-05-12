@@ -44,10 +44,9 @@ class LoginScreen extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.all(3),
-            child: CupertinoButton(
+            child: ElevatedButton(
               onPressed: () {},
               child: Text("Login"),
-              color: CupertinoColors.activeGreen,
             ),
           ),
         ],
