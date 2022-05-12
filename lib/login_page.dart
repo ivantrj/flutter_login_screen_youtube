@@ -9,8 +9,6 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar:
-          const CupertinoNavigationBar(middle: Text('KindaCode.com')),
       child: Column(
         children: <Widget>[
           Padding(
