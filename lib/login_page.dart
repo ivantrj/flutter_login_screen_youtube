@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-            child: TextFormField(
+            child: TextField(
               obscureText: true,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
